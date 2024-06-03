@@ -79,7 +79,9 @@ class UserService {
 
     async getAllUsers() {
         const users = await userModel.find()
-        return users
+        const usersDto = []
+        users.forEach((user) => usersDto.push(new UserDto(user)))
+        return usersDto
     }
 }
 
