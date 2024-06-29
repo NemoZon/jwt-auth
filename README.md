@@ -38,7 +38,7 @@ Create a local environment file for server configuration:
 Edit the .env.local file by copying the contents from .env and updating the necessary values.
 
 ### MongoDB Setup
-1) Create a MongoDB cluster by signing up or logging into [MongoDB](https://nodejs.org/).
+1) Create a MongoDB cluster by signing up or logging into [MongoDB](https://www.mongodb.com/).
 
 2) Obtain your MongoDB connection string *(format: mongodb+srv://...)* and add it to the .env.local file as **DB_URL**.
 
