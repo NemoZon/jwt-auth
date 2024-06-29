@@ -68,6 +68,7 @@ class UserController {
     async refresh(req, res, next) {
         try {
             const {refreshToken} = req.cookies
+            console.log('refreshToken', refreshToken)
             const userData = await userService.refresh(refreshToken)
             res.cookie(
                 'refreshToken',
@@ -78,6 +79,7 @@ class UserController {
                     secure: process.env.MODE !== 'dev',  // ONLY FOR HTTPS SERVERS
                 }
             )
+            console.log('res.cookie', res)
 
             return res.json(userData)
         } catch (error) {
